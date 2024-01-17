@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TTS Training Recorder</title>
+    <style>
+      #sentenceArea {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .controls {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>TTS Training Recorder</h1>
+    <h3 id="progressDisplay"></h3>
+    <br />
+    <div>Please read the following sentence:</div>
+    <br />
+    <div id="sentenceArea"></div>
+    <br />
+    <div class="controls">
+      <button id="recordButton">Start Recording</button>
+      <button id="stopButton" disabled>Stop Recording</button>
+      <audio id="audioPlayback" controls hidden></audio>
+      <button id="acceptButton" disabled>Accept and Next</button>
+      <button id="rejectButton" disabled>Reject and Retry</button>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
