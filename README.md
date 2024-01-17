@@ -12,11 +12,36 @@ The UI is not functional and practical, but not going to win any awards. The poi
 
 ## Usage
 
-TODO
+The data has already been sourced. The Demo is intended to run against `./data/merged_dataset.csv`. It is advised that you update the last row
+of that CSV to reflect your use case (adjust your name and company).
+
+Once that is set up, move to the `./src` directory run `python app.py`. Note, for this to work, you will need Flask installed (pip install flask).
+
+The application will create an `./audio` directory in application root if it does not already exist. Open `http://localhost:5000` in a browser of your
+choice. The workflow from that point should be self explanatory. Follow the instructions to create, sentence by sentence, the dataset required to train
+a custom voice TTS model.
+
+If ever you need to stop, you can shut down the application. On restart, the program will check the `./audio` directory for the last sample and advance
+you to the next sample and let you know when you are done.
 
 ## Requirements
 
-TODO
+For the basic web application:
+
+```text
+Python >= 3.9
+flask
+```
+
+For the data acquisition (you can just use the csvs, but in case you want to start over)
+
+```text
+python >= 3.9
+pandas
+requests
+```
+
+Library versions shouldn't matter as we're using extremely basic functionality.
 
 ## Credit
 
